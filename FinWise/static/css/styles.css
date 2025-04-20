@@ -1,0 +1,162 @@
+/* Custom styling for FinWise banking assistant */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Chat container styling */
+#chat-messages {
+  height: 400px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(156, 163, 175, 0.5) transparent;
+}
+
+#chat-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+#chat-messages::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#chat-messages::-webkit-scrollbar-thumb {
+  background-color: rgba(156, 163, 175, 0.5);
+  border-radius: 3px;
+}
+
+/* Message animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.message-animation {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Loading indicator */
+.typing-indicator {
+  display: flex;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.typing-indicator span {
+  height: 8px;
+  width: 8px;
+  background-color: #3b82f6;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 3px;
+  opacity: 0.6;
+}
+
+.typing-indicator span:nth-child(1) {
+  animation: bounce 1s infinite 0.1s;
+}
+
+.typing-indicator span:nth-child(2) {
+  animation: bounce 1s infinite 0.3s;
+}
+
+.typing-indicator span:nth-child(3) {
+  animation: bounce 1s infinite 0.5s;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* User and bot message styling */
+.user-message {
+  background-color: #ebf5ff;
+  border-radius: 12px 12px 0 12px;
+}
+
+.bot-message {
+  background-color: #f3f4f6;
+  border-radius: 12px 12px 12px 0;
+}
+
+/* Categories styling */
+.category-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.category-credit_card {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.category-loan {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+.category-account {
+  background-color: #dbeafe;
+  color: #2563eb;
+}
+
+.category-passbook {
+  background-color: #d1fae5;
+  color: #059669;
+}
+
+.category-atm {
+  background-color: #e0e7ff;
+  color: #4f46e5;
+}
+
+.category-online_banking {
+  background-color: #f5d0fe;
+  color: #a21caf;
+}
+
+/* Confidence meter */
+.confidence-meter {
+  height: 6px;
+  background-color: #e5e7eb;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-top: 2px;
+}
+
+.confidence-level {
+  height: 100%;
+  background-color: #3b82f6;
+  border-radius: 3px;
+}
+
+/* Sample questions hover effect */
+.sample-question {
+  transition: all 0.2s ease;
+}
+
+.sample-question:hover {
+  transform: translateX(4px);
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  #chat-messages {
+    height: 350px;
+  }
+}

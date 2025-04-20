@@ -51,7 +51,7 @@ FinWise/
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/ARK018/finwise.git
+git clone https://github.com/ARK018/FinWise.git
 cd finwise
 ```
 

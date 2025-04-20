@@ -75,9 +75,7 @@ pip install flask nltk scikit-learn sentence-transformers groq pandas
 
 ```bash
 # On Windows
-set GROQ_API_KEY=your_groq_api_key_here
-# On macOS/Linux
-export GROQ_API_KEY=your_groq_api_key_here
+$env:GROQ_API_KEY = your_groq_api_key_here
 ```
 
 ## Usage
